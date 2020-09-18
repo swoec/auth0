@@ -12,6 +12,8 @@ var authRouter = require('./routes/auth');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+var router = express.Router();
+
 dotenv.config();
 
 // Configure Passport to use Auth0
@@ -126,5 +128,6 @@ app.use(function (err, req, res, next) {
     error: {}
   });
 });
+
 
 module.exports = app;
